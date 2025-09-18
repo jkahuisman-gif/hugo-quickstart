@@ -2,3 +2,16 @@ baseURL: "http://hugo-quickstart-template.netlify.com"
 languageCode: "en-us"
 title: "Netlify + Hugo Quickstart"
 theme: "netlify-basic"
+
+collections:
+  - name: "boats"
+    label: "Boten"
+    folder: "content/boats"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Naam", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "string" }
+      - { label: "Locatie", name: "location", widget: "string" }
+      - { label: "Prijs", name: "price", widget: "number" }
+      - { label: "Afbeelding", name: "image", widget: "image" }
